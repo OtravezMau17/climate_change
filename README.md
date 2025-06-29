@@ -1,4 +1,5 @@
-# macroeconomics
+# climate_change
+
 This repository contains all necessary files to run the climate change EDIAM model.
 
 Based on the framework created by Edmundo Molina-Pérez et al (2020), the following four scripts will be found:
@@ -10,3 +11,8 @@ Based on the framework created by Edmundo Molina-Pérez et al (2020), the follow
 
 More information can be found here: https://github.com/emolinaperez/Ediam_vFrontiers/blob/Master/README.md
 
+Datasets can be accesses here: 
+
+- Climate Data Calibration: Access link: 
+- Experimental Design: Access link: 
+- Experimental Results: Access link: 
