@@ -1,5 +1,5 @@
 # macroeconomics
-This repository contains all necessary files to run the EDIAM model.
+This repository contains all necessary files to run the climate change EDIAM model.
 
 Based on the framework created by Edmundo Molina-Pérez et al (2020), the following four scripts will be found:
 
