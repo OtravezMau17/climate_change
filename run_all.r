@@ -8,13 +8,13 @@ library(ggplot2)
 library(dplyr)
 library(tidyr)
 
-# 2.Model functions
-source("ediamMain.R")
-source("EdiamEquations.R")
-source("ediamInitialConditions.R")
-source("ediamEmpiricalParameters.R")
-source("uncertainty.R")
-source("plotting_functions.R") 
+# 2. Model functions
+source("Main/ClimateCalibration.r")       # climate parameters
+source("Main/Ediam_vFrontiers.r")         # ediam structure
+source("Main/Main_vFrontiers.r")          # main simulation scropt
+source("Main/harness_processing.r")       # results processing
+source("Main/main_calib.r")               # calib
+source("Main/sdprim_vFrontiers.r")        # PRIM an uncertainty
 
 # 3. Base parameters
 calib.params <- read.csv("Data/Calibration.csv", row.names = 1)
