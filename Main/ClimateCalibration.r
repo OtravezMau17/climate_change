@@ -1,6 +1,6 @@
 #calibrate climate scenarios
 #read the data
- dir.climate.data<- read.csv("Data/AllGCMs.csv")
+ dir.climate.data<- "C:/Users/galla/Downloads/ediam/climate_change/Data/"
  climate.data<-read.csv(paste(dir.climate.data,"AllGCMs.csv",sep=""))
 
 #PART1: CALIBRATION OF DELTA TEMP VS LOG CO2 FUNCTION
@@ -37,7 +37,7 @@ delta.temp.disater<-7.5 #[degrees Celsius] increase in average global temperatur
 
 #PART2: CALIBRATION OF S EQUATION
 #read the data
- dir.climate.data<-"C:\\Users\\emolina\\Edmundo-RAND\\Projects\\Dissertation\\Model Development\\TechChange-RDM\\ClimateDataCalibration\\"
+ dir.climate.data<-"C:/Users/galla/Downloads/ediam/climate_change/Data/"
  climate.data<-read.csv(paste(dir.climate.data,"AllGCMs.csv",sep=""))
 #The historical record across RCPs is the same, thus we aggregate the models at RCP level
  climate.data<-aggregate(climate.data[,"co2.ppm"],list(Climate.Model=climate.data$Climate.Model,Year=climate.data$Year),mean)
