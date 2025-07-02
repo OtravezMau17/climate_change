@@ -5,7 +5,7 @@
 ## =================================================================================================================================================
 ## This section creates the Experimental Design Based on Input Tables
 ## =================================================================================================================================================
-  dir.exp.inputs<-paste(root,"RDM Inputs\\",sep="")
+  dir.exp.inputs<-paste(root,sep="")
   Limits.File<-"Limits.csv"
   Policies.File<-"Policies.csv"
   Climate.File<-"Climate.csv"
