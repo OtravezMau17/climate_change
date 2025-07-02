@@ -1,6 +1,6 @@
 #calibrate climate scenarios
 #read the data
- dir.climate.data<-"C:\\~Model Development\\TechChange-RDM\\ClimateDataCalibration\\"
+ dir.climate.data<- read.csv("Data/AllGCMs.csv")
  climate.data<-read.csv(paste(dir.climate.data,"AllGCMs.csv",sep=""))
 
 #PART1: CALIBRATION OF DELTA TEMP VS LOG CO2 FUNCTION
