@@ -1,5 +1,5 @@
 #define vector for output
- root<-"."
+ root<-"C:/Users/galla/Downloads/ediam/climate_change/"
 
 #this script has been created to find the optimal value of policies for a future id,
   #library(deSolve)
@@ -8,13 +8,13 @@
   library(optimx,lib=paste(root,"Rlibraries\\",sep=""))
   dir.harness<-paste(root,"RDM Harness\\",sep="")
 #Source Experimental Design
-  dir.exp<-paste(root,"RDM Inputs\\",sep="")
+  dir.exp<-paste(root,sep="")
   experiment.version<-"Exp.design_calib.csv"
   Exp.design<-read.csv(paste(dir.exp,experiment.version,sep=""))
 #run the model once
 
 #Source Model
-  dir.model<-paste(root,"TechChange Model\\",sep="")
+  dir.model<-paste(root,sep="")
   model.version<-"InternationalGreenTechChangeModel_9_19_2015_calib.r"
   source(paste(dir.model,model.version,sep=""))
 
