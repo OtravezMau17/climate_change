@@ -11,8 +11,4 @@ Based on the framework created by Edmundo Molina-Pérez et al (2020), the follow
 
 More information can be found here: https://github.com/emolinaperez/Ediam_vFrontiers/blob/Master/README.md
 
-Datasets can be accesses here: 
-
-- Climate Data Calibration: Access link: 
-- Experimental Design: Access link: 
-- Experimental Results: Access link: 
+Datasets are self-contained in this repository.
