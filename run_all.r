@@ -8,6 +8,8 @@ library(ggplot2)
 library(dplyr)
 library(tidyr)
 
+setwd("C:/Users/galla/Downloads/ediam/climate_change")
+
 # 2. Model functions
 source("Main/ClimateCalibration.r")       # climate parameters
 source("Main/Ediam_vFrontiers.r")         # ediam structure
