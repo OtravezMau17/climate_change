@@ -2,8 +2,8 @@
 ## This section runs PRIM accross the experimental results data set
 ## =====================================================================================================
 #cloud
- #root<-"C:\\~TechChange-RDM\\"
- #Number.Cores<-30
+ root<-"."
+ Number.Cores<-30
 
 #load libraries
  library(sdtoolkit,lib=paste(root,"Rlibraries\\",sep=""))
