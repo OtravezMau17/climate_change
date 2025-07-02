@@ -1,7 +1,9 @@
 #define vector for output
- root<-"C:\\~Model Development\\TechChange-RDM\\"
+ root<-"."
 
 #this script has been created to find the optimal value of policies for a future id,
+  #library(deSolve)
+  #library(optimx)
   library(deSolve,lib=paste(root,"Rlibraries\\",sep=""))
   library(optimx,lib=paste(root,"Rlibraries\\",sep=""))
   dir.harness<-paste(root,"RDM Harness\\",sep="")
