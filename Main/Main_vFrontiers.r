@@ -1,18 +1,18 @@
 #cloud
- root<-"."
+ root<-"C:/Users/galla/Downloads/ediam/climate_change/"
  Number.Cores<-32
 
 ## =================================================================================================================================================
 ## This section creates the Experimental Design Based on Input Tables
 ## =================================================================================================================================================
-  dir.exp.inputs<-paste(root,sep="")
-  Limits.File<-"Limits.csv"
+  dir.exp.inputs<-paste(root, "/Data/", sep="")
+  Limits.File<-"Limits_original.csv"
   Policies.File<-"Policies.csv"
   Climate.File<-"Climate.csv"
   sample.size<-300
   Policy.Switch<-TRUE
   Climate.Switch<-TRUE
-  source(paste(dir.exp.inputs,"create_experiment_function.r",sep=""))
+  source(paste(dir.exp.inputs, "create_experiment_function.r", sep=""))
   Exp.design<-exp.design.table(dir.exp.inputs,Limits.File,sample.size,Policies.File,Policy.Switch,Climate.File,Climate.Switch)
   write.csv(Exp.design, paste(dir.exp.inputs, "Exp.design.csv", sep=""), row.names=FALSE)
 
