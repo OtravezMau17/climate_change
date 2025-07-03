@@ -20,22 +20,22 @@
 ## This section runs the model across the experimental design and prints an output file for each run
 ## ==================================================================================================================================================
 #Source Model
-  dir.model<-paste(root,"TechChange Model\\",sep="")
+  dir.model<-paste(root,sep="")
   model.version<-"InternationalGreenTechChangeModel_10_22_2015.r"
   source(paste(dir.model,model.version,sep=""))
 #Source Experimental Design
-  dir.exp<-paste(root,"RDM Inputs\\",sep="")
+  dir.exp<-paste(root,sep="")
   experiment.version<-"Exp.design.csv"
   Exp.design<-read.csv(paste(dir.exp,experiment.version,sep=""))
 #Define directory to print output files
-  dir.harness<-paste(root,"RDM Harness\\",sep="")
+  dir.harness<-paste(root,sep="")
 #Clean output folder
   do.call(file.remove,list(paste(dir.harness,list.files(dir.harness, pattern="*.csv", full.names=FALSE),sep="")))
 #Set up parallel environment
 #Run Model in Parallel
-  library(snow,lib=paste(root,"Rlibraries\\",sep=""))
-  library(deSolve,lib=paste(root,"Rlibraries\\",sep=""))
-  library(optimx,lib=paste(root,"Rlibraries\\",sep=""))
+  library(snow,lib=paste(root,sep=""))
+  library(deSolve,lib=paste(root,sep=""))
+  library(optimx,lib=paste(root,sep=""))
   nCore<-Number.Cores
   cl <- makeSOCKcluster(names = rep('localhost',nCore))
   global.elements<-list("Exp.design","TechChangeMod","dir.harness","dede","lagderiv","lagvalue","optimx") # dede, lagderiv are functions od deSolve
@@ -158,17 +158,17 @@ if (x['policy.name']=="FWA")
 ## =====================================================================================================
   Number.Cores<-4
  #Define directory parameters
-  dir.inputs<-paste(root,"RDM Inputs\\",sep="")
-  dir.harness<-paste(root,"RDM Harness\\",sep="")
-  dir.output<-paste(root,"RDM Outputs\\",sep="")
+  dir.inputs<-paste(root,sep="")
+  dir.harness<-paste(root,sep="")
+  dir.output<-paste(root,sep="")
  #load needed libraries
-  library(reshape2,lib= paste(root,"Rlibraries\\",sep=""))
-  library(data.table,lib=paste(root,"Rlibraries\\",sep=""))
-  library(snow,lib=paste(root,"Rlibraries\\",sep=""))
+  library(reshape2,lib= paste(root,sep=""))
+  library(data.table,lib=paste(root,sep=""))
+  library(snow,lib=paste(root,sep=""))
 #create vector with file names
   filenames <- list.files(dir.harness, pattern="*.csv", full.names=FALSE)
 #source function to process harnessed output data
-  source(paste(dir.inputs,"harness_processing.r",sep=""))
+  source(paste(dir.inputs,sep=""))
 #run post-processing in parallel
   nCore<-Number.Cores
   cl <- makeSOCKcluster(names = rep('localhost',nCore))
@@ -195,16 +195,16 @@ if (x['policy.name']=="FWA")
   prim.data$Z.epsilon<-scale(prim.data$epsilon, center=TRUE, scale=TRUE)
 
   #write.csv(prim.data, paste(dir.output, "prim.data_7_06_2015.csv", sep=""), row.names=FALSE)
-  write.csv(prim.data, paste(dir.output, "prim.data_extras_seminar.csv", sep=""), row.names=FALSE)
+  write.csv(prim.data, paste(dir.output, sep=""), row.names=FALSE)
 
 ## =====================================================================================================
 ## This section reads the output of simulations and reshapes it into time series split by region,
 ## =====================================================================================================
 Number.Cores<-18
 #Define directory parameters
- dir.inputs<-paste(root,"RDM Inputs\\",sep="")
- dir.harness<-paste(root,"RDM Harness\\",sep="")
- dir.output<-paste(root,"RDM Outputs\\",sep="")
+ dir.inputs<-paste(root,sep="")
+ dir.harness<-paste(root,sep="")
+ dir.output<-paste(root,sep="")
 
 #crate vector with file names
  experiment.version<-"Exp.design.csv"
@@ -214,8 +214,8 @@ Number.Cores<-18
 #source function to process harnessed output data
  source(paste(dir.inputs,"harness_processing.r",sep=""))
 #run post-processing in parallel
-  library(data.table,lib=paste(root,"Rlibraries\\",sep=""))
-  library(snow,lib=paste(root,"Rlibraries\\",sep=""))
+  library(data.table,lib=paste(root,sep=""))
+  library(snow,lib=paste(root,sep=""))
   nCore<-Number.Cores
   cl <- makeSOCKcluster(names = rep('localhost',nCore))
   global.elements<-list("dir.inputs","experiment.version","dir.harness","process.harness.data")
